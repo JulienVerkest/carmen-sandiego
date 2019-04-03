@@ -1,0 +1,59 @@
+#cs {
+  height:600px;
+  max-height:600px;
+  margin-top:10px;
+}  
+
+.cs-zone {
+  box-shadow:5px 5px #000;
+  border:1px solid #000;
+}
+
+.cs-zone-inner {
+  border:3px solid #FFF;
+  background-color:#000;
+  height:100%;
+}
+
+.cs-zone-1,
+.cs-zone-4 {
+  height:80px;
+  color:#fff;
+}
+
+.cs-zone-4 {
+  height:120px;
+  color:#fff;
+}
+
+
+.cs-zone-2 {
+  height:520px;
+}
+
+.cs-zone-3 {
+  height:480px;
+}
+
+.row > div {
+  padding-left:0;
+  padding-right:1px;
+}
+
+/* ZONE 4 */
+.cs-zone-4 .cs-zone-inner {
+  text-align:center; 
+  background-color:#fff;
+}
+
+.mb-8 {
+  margin-bottom:20px;
+}
+
+.mb-4 {
+  margin-bottom:10px;
+}
+
+.mb-0 {
+  margin-bottom:0;
+}

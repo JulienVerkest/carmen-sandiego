@@ -1,0 +1,45 @@
+.cs-btn {
+  display: inline-flex;
+  padding:5px;
+  background-color: #fff;
+  border:1px solid #000;
+  box-shadow:5px 5px #000;
+  margin-right:10px;
+  cursor:pointer;
+}
+
+.cs-btn-inner {
+  width:137px;
+  height:93px;
+  padding:2px;
+  background-size: contain;
+  background-position: top left;
+  background-repeat:no-repeat;
+  border:1px solid #000;
+}
+
+
+.cs-btn:hover,
+.cs-btn:focus {
+  background-color: green;
+}
+
+.cs-btn-see .cs-btn-inner {
+  background-image: url('see.jpg');
+}
+
+.cs-btn-hide .cs-btn-inner {
+  background-image: url('hide.jpg');
+}
+
+.cs-btn-depart .cs-btn-inner {
+  background-image: url('depart.jpg');
+}
+
+.cs-btn-search .cs-btn-inner {
+  background-image: url('search.jpg');
+}
+
+.cs-btn-crime .cs-btn-inner {
+  background-image: url('crime.jpg');
+}

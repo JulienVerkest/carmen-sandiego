@@ -1,0 +1,31 @@
+/* TEXT MACHINE INSTRUCTIONS : INPUT USER, START INVESTIGATION */
+.cs-instructions {
+  background-image: url('machine-text.png');
+  background-size: contain;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  height:520px;
+} 
+
+.cs-instructions-inner {
+  background-color:#fff;
+  background-image: url('bg-machine-text.jpg');
+  background-size: contain;
+  background-position: bottom left;
+  background-repeat:repeat-y;
+  font-size:13px;
+  line-height:24px;
+  padding:10px 30px 10px 30px;
+  margin:10px 0 0 38px; 
+  max-height:320px;
+  min-height:320px;
+  min-width: 390px;
+  width:390px;
+  max-width:390px;
+  overflow-y:hidden;
+  position: absolute;
+  z-index: 2;
+  bottom:190px;
+}

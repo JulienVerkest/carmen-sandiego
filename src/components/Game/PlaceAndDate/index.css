@@ -1,0 +1,22 @@
+.cs-zone-1 {
+  height:80px;
+  color:#fff;
+}
+
+/* HEADQUARTERS */
+.cs-zone-1 .cs-zone-inner {
+  padding:7px 0 0 0;
+}
+
+.cs-place-date {
+  text-align:center;
+  font-weight: bold;
+  font-size:18px;
+  line-height:22px;
+  letter-spacing:2px;
+}
+
+.cs-place {
+  text-transform: uppercase;
+  margin-top:5px;
+}
