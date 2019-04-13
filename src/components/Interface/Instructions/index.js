@@ -34,6 +34,7 @@ class Instructions extends Component {
                 createUser={this.props.createUser}
                 loadUser={this.props.loadUser}
                 setScroll={this.setScroll}
+                isSound={this.props.isSound}
               />
             : ''
           }
@@ -45,6 +46,7 @@ class Instructions extends Component {
               userRank={this.props.userRank}
               user={this.props.user}
               setScroll={this.setScroll}
+              isSound={this.props.isSound}
               />
             : ''
           }

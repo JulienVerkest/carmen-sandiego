@@ -5,6 +5,7 @@
 const Dossiers = [
   {
     "en": {
+      "id": "1",
       "Name": "Carmen Sandiego", 
       "Sex": "Female",
       "Occupation":  "A former spy for the Intelligence Service of Monaco",
@@ -20,6 +21,7 @@ const Dossiers = [
   },
   {
     "en": {
+      "id": "2",
       "Name": "Merey LaRoc", 
       "Sex": "Female",
       "Occupation":  "Ms. LaRoc is a freelance aerobic dancer",
@@ -34,6 +36,7 @@ const Dossiers = [
   },
   {
     "en": {
+      "id": "3",
       "Name": "Dazzle Annie Nonker", 
       "Sex": "Female",
       "Occupation":  "Proprietress of the toughest yogurt bar east of Suez.",
@@ -48,6 +51,7 @@ const Dossiers = [
   },
   {
     "en": {
+      "id": "4",
       "Name": "Lady Agatha Wayland", 
       "Sex": "Female",
       "Occupation":  "A colorful character with a predilection for sensible shoes, Lady Agatha is a reader of mystery stories set in upper-class English drawing rooms.",
@@ -62,6 +66,7 @@ const Dossiers = [
   },
   {
     "en": {
+      "id": "5",
       "Name": "Len Red Bulk", 
       "Sex": "Male",
       "Occupation":  "Ex-professional hockey player and compulsive gambler, Len was barred for life from playing when he was caught trying to bribe himself.",
@@ -76,6 +81,7 @@ const Dossiers = [
   },
   {
     "en": {
+      "id": "6",
       "Name": "Scar Graynolt", 
       "Sex": "Male",
       "Occupation":  "Scar plays the role of a mild-mannered folk guitarist, while in reality, he is a complete plug-ugly.",
@@ -90,6 +96,7 @@ const Dossiers = [
   },
   {
     "en": {
+      "id": "7",
       "Name": "Nick Brunch", 
       "Sex": "Male",
       "Occupation":  "Hard-boiled ex-private eye, ear, and nose and throat.",
@@ -104,6 +111,7 @@ const Dossiers = [
   },
   {
     "en": {
+      "id": "8",
       "Name": "Fast Eddie B.", 
       "Sex": "Male",
       "Occupation":  "A world class croquet player, he always carries his custom-made set of mallets in the trunk of his convertible.",
@@ -118,6 +126,7 @@ const Dossiers = [
   }, 
   {
     "en": {
+      "id": "9",
       "Name": "Ihor Ihorovitch", 
       "Sex": "Male",
       "Occupation":  "Pretender to the Czarist throne and a lot of other things, too.  Ihorovitch has an amazing ability to disappear from sight for varying amounts of time.",
@@ -132,6 +141,7 @@ const Dossiers = [
   },
   {
     "en": {
+      "id": "10",
       "Name": "Katherine Boom-Boom Drib", 
       "Sex": "Female",
       "Occupation":  "Three-time winner of the Trans-Siberian motorcyle race. Drib is the official hostess for V.I.L.E.",

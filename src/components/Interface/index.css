@@ -31,8 +31,15 @@
   height:520px;
 }
 
+/* ZONE 3 BUBBLE + CRIME */
 .cs-zone-3 {
   height:480px;
+}
+
+.cs-description {
+  color:#fff;
+  padding:20px;
+  font-size:20px;
 }
 
 .row > div {
@@ -57,3 +64,4 @@
 .mb-0 {
   margin-bottom:0;
 }
+

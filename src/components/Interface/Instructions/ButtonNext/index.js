@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 class ButtonNext extends Component {
-  constructor(props){
-    super(props);
-  }
-
   componentDidMount() {
     this.props.setScroll(); 
   }

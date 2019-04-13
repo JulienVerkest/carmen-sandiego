@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import './index.css';
 import Typemachine from '../../../Typemachine';
-import ButtonNext from '../Button';
+import ButtonNext from '../ButtonNext';
 
 class Step1 extends Component {
   render() {
-    const {onChangeStep, onChangeUser, step, isUserValid, user} = this.props;
+    const {onChangeStep, onChangeUser, step, isUserValid, user, isSound} = this.props;
     return (
       <div>
-        <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring ={'Detective at keyword'} step={step} changeStep={onChangeStep}></Typemachine>
+        <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring ={'Detective at keyword'} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
         {
           step > 1
-          ? <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring ={'please identify yourself:'} step={step} changeStep={onChangeStep}></Typemachine>
+          ? <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring ={'please identify yourself:'} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
           : ''
         }
         {
@@ -31,13 +31,13 @@ class Step2 extends Component {
     this.props.setScroll(); // set Scroll
   }
   render() {
-    const {onChangeStep, createUser, loadUser, step} = this.props;
+    const {onChangeStep, createUser, loadUser, step, isSound} = this.props;
     return (
       <div>
-        <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring ={'There is no record of your name on Interpol files.'} step={step} changeStep={onChangeStep}></Typemachine>
+        <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring ={'There is no record of your name on Interpol files.'} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
         {
           step > 4 
-          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={'Are you new here?'} step={step} changeStep={onChangeStep}></Typemachine>
+          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={'Are you new here?'} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
           : ''
         }   
         {
@@ -59,22 +59,22 @@ class Step3 extends Component {
   }
 
   render() {
-    const {onChangeStep, step, isNewUser, user, userRank} = this.props;
+    const {onChangeStep, step, isNewUser, user, userRank, isSound} = this.props;
     return (
       <div >
         {
           isNewUser 
-          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`You have been identified, ${user}`} step={step} changeStep={onChangeStep}></Typemachine>
-          : <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`We load your personal information, ${user}`} step={step} changeStep={onChangeStep}></Typemachine>
+          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`You have been identified, ${user}`} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
+          : <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`We load your personal information, ${user}`} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
         }
         {
           step > 7 
-          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`Your current rank is ${userRank}`} step={step} changeStep={onChangeStep}></Typemachine>
+          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`Your current rank is ${userRank}`} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
           : ''
         }
         {
           step > 8
-          ? <ButtonNext mb={'mb-4'} setScroll={this.props.setScroll} onChangeStep={onChangeStep} nextStep={10}>Press this button <br/>to start investigation </ButtonNext>
+          ? <ButtonNext mb={'mb-4'} setScroll={this.props.setScroll} onChangeStep={onChangeStep} nextStep={10} isSound={isSound}>Press this button <br/>to start investigation </ButtonNext>
           : ''
         }
       </div>
@@ -93,10 +93,18 @@ class User extends Component {
           isUserValid={this.props.isUserValid}
           user={this.props.user}
           setScroll={this.props.setScroll}
+          isSound={this.props.isSound}
         />
         {
           this.props.step > 3
-          ?  <Step2 createUser={this.props.createUser} loadUser={this.props.loadUser} step={this.props.step} onChangeStep={this.props.onChangeStep} setScroll={this.props.setScroll}  /> 
+          ?  <Step2 
+              createUser={this.props.createUser} 
+              loadUser={this.props.loadUser} 
+              step={this.props.step} 
+              onChangeStep={this.props.onChangeStep} 
+              setScroll={this.props.setScroll}  
+              isSound={this.props.isSound}
+            /> 
           : ''
         }
         {
@@ -108,6 +116,7 @@ class User extends Component {
               user={this.props.user}
               userRank={this.props.userRank}
               setScroll={this.props.setScroll}  
+              isSound={this.props.isSound}
             />
           : ''
         }

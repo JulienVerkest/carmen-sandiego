@@ -62,7 +62,7 @@ const Cases = [
               "Clue": "The person you're looking for was here and she was disappointed when she found no books about the Assyrians."
             }
           ],
-          "destinations": ["Bamako","Paris","Baghdad","Moscow"]
+          "destinations": ["Bamako","Baghdad","Moscow"]
         },
         {
           "city": {
@@ -87,7 +87,7 @@ const Cases = [
               "Clue": "a suspicious was here and she said she was planning to have tea with the President."
             }
           ],
-          "destinations": ["Athens","Cairo","Tokyo"]
+          "destinations": ["Athens","Cairo","Rio de Janeiro"]
         },
         {
           "city": {
@@ -112,7 +112,7 @@ const Cases = [
               "Clue": "The person you're looking for was here and she said she wanted to find out what made Big Ben tick."
             }
           ],
-          "destinations": ["London","Baghdad","Colombo","Rome"]
+          "destinations": ["London","Colombo","Rome"]
         },
         {
           "city": {

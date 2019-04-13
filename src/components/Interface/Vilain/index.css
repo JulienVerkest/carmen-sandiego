@@ -1,0 +1,10 @@
+.cs-vilain {
+  height: 90%;
+  width: 90%;
+  margin: 2% 5%;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 0;
+  opacity: .3;
+}

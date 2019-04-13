@@ -1,12 +1,12 @@
-.cs-modal-destinations {
+.cs-modal-clues {
   position: absolute;
   z-index: 6;
-  max-width: 450px;
-  width: 450px;
+  max-width: 650px;
+  width: 650px;
   margin: 0 auto;
   left: 50%;
-  margin-left: -700px;
-  top: 70px;
+  margin-left: -500px;
+  top:150px;
   max-height: auto;
   height: auto;
   overflow: auto;
@@ -14,15 +14,23 @@
   border: 5px solid #fff;
 }
 
-.cs-modal-destinations-inner > div {
+.cs-modal-clues-places > div {
   text-transform:uppercase;
   padding-bottom:2px;
   padding-top:2px;
-}
-.cs-modal-destinations-inner > div.btn-depart {
   cursor:pointer;
 }
-.cs-modal-destinations-inner > div.btn-depart:hover {
+
+.cs-modal-clues-places > div:hover {
   background:#fff;
   color:#000;
+}
+
+.cs-modal-clues-emoji {
+  font-size:120px;
+  margin-left:50px;
+}
+
+.cs-modal-clues-places {
+  margin-top:80px;
 }

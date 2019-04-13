@@ -24,6 +24,11 @@
   background-color: green;
 }
 
+.cs-btn-hide,
+.cs-btn-depart-hide {
+  background-color: green;
+} 
+
 .cs-btn-see .cs-btn-inner {
   background-image: url('see.jpg');
 }

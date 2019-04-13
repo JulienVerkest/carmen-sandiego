@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
-import soundTypewriter from './sound-typewriter.mp3';
+import soundTypewriter from './sound-typewriter-2.mp3';
 
 class Typemachine extends Component {
   constructor(props){
@@ -57,13 +57,7 @@ class Typemachine extends Component {
     return (
       <div className={this.props.mb}>
         <span ref={this.typewriter}></span>
-        <audio  
-
-            ref={this.setmySound}
-            src={soundTypewriter}>
-                Your browser does not support the
-                <code>audio</code> element.
-        </audio>
+        <audio ref={this.setmySound} src={soundTypewriter}> </audio>
       </div>
     );
   }
