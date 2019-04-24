@@ -1,0 +1,11 @@
+.cs-no-padding {
+  padding:0;
+}
+
+.bg-light {
+  background-color: #FFF !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000
+}

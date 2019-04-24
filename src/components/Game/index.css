@@ -1,0 +1,103 @@
+/*#cs {
+  height:600px;
+  max-height:600px;
+  margin-top:10px;
+}  */
+
+.cs-zone {
+  box-shadow:5px 5px #000;
+  border:1px solid #000;
+}
+
+.cs-zone-inner {
+  border:3px solid #FFF;
+  background-color:#000;
+  height:100%;
+}
+
+.cs-zone-1,
+.cs-zone-4 {
+  height:80px;
+  color:#fff;
+}
+
+.cs-zone-4 {
+  height:120px;
+  color:#fff;
+}
+
+
+.cs-zone-2 {
+  height:520px;
+}
+
+/* ZONE 3 BUBBLE + CRIME */
+.cs-zone-3 {
+  height:480px;
+}
+
+.cs-description {
+  color:#fff;
+  padding:20px;
+  font-size:20px;
+}
+
+.row > div {
+  padding-left:0;
+  padding-right:1px;
+}
+
+/* ZONE 4 */
+.cs-zone-4 .cs-zone-inner {
+  text-align:center; 
+  background-color:#fff;
+}
+
+.mb-8 {
+  margin-bottom:20px;
+}
+
+.mb-4 {
+  margin-bottom:10px;
+}
+
+.mb-0 {
+  margin-bottom:0;
+}
+
+button {
+  background-color: #f4fc67;
+  box-shadow:2px 2px #000;
+  border:1px solid #000;
+  outline:none;
+}
+
+button:hover {
+  box-shadow:5px 5px #000;
+}
+
+button:focus {
+  outline:0 !important;
+}
+
+/* Mobile */ 
+@media only screen and (max-width: 600px) {
+  .cs-zone-2 {
+    max-height: 300px;
+  }
+
+  /* ZONE 3 BUBBLE + CRIME */
+  .cs-zone-3 {
+    max-height:300px;
+    height:300px;
+  }
+  .cs-description {
+    color:#fff;
+    padding:20px 10px;
+    font-size:14px;
+  }
+
+  .cs-zone-4 {
+    height:auto;
+  }
+}

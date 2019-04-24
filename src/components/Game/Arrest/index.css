@@ -1,0 +1,31 @@
+/*.cs-suspicious-gif {
+  position:absolute;
+  bottom:140px;
+  left:10px;
+  width:140px;
+  height:137px;
+  animation-name: suspicious;
+  animation-duration:1s;
+  animation-iteration-count: 3;
+}
+
+@keyframes suspicious {
+  0% { left:10px; }
+  100% { left:450px; }
+}*/
+
+.cs-fail-message {
+  color:#fff;
+  margin:120px auto 0 auto;
+  text-align: center;
+}
+
+/* Mobile */ 
+@media only screen and (max-width: 600px) {
+  .cs-arrest {
+    height:240px;
+  }
+  .cs-fail-message {
+    margin-top:0;
+  }
+}

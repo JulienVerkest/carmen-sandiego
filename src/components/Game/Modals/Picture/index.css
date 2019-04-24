@@ -1,0 +1,10 @@
+.cs-picture {
+  width:465px;
+}
+
+/* Mobile */ 
+@media only screen and (max-width: 600px) {
+  .cs-picture {
+    width:100%;
+  }
+}

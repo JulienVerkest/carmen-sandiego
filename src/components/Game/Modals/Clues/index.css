@@ -1,0 +1,61 @@
+.cs-modal-clues {
+  position: absolute;
+  z-index: 6;
+  max-width: 650px;
+  width: 650px;
+  margin: 0 auto;
+  left: 50%;
+  margin-left: -500px;
+  top:150px;
+  max-height: auto;
+  height: auto;
+  overflow: auto;
+  background-color: #000;
+  border: 5px solid #fff;
+}
+
+.cs-modal-clues-places > div {
+  text-transform:uppercase;
+  padding-bottom:2px;
+  padding-top:2px;
+  cursor:pointer;
+}
+
+.cs-modal-clues-places > div:hover {
+  background:#fff;
+  color:#000;
+}
+
+.cs-modal-clues-emoji {
+  font-size:100px;
+  margin-left:50px;
+  padding-bottom: 25px;
+  border-bottom:5px solid black;
+    -webkit-transition: border-color .2s;
+  -moz-transition: border-color .2s;
+  -o-transition: border-color .2s;
+  transition: border-color .2s;
+}
+
+.cs-modal-clues-places {
+  margin-top:40px;
+}
+
+.cs-selected {
+  border-bottom:5px solid #FFF;
+}
+
+/* Mobile */ 
+@media only screen and (max-width: 600px) {
+  .cs-modal-clues {
+    max-width: auto;
+    width: 99%;
+    top:-30px;
+    margin-left:0;
+    left:0;
+  }
+  .cs-modal-clues-emoji {
+    font-size:70px;
+    margin-left:20px;
+  }
+}

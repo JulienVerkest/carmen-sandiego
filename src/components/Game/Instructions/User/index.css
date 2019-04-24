@@ -1,0 +1,44 @@
+.cs-input-name {
+  margin-top:1rem;
+}
+
+.cs-input-name input {
+  padding:0rem 2rem .1rem 1rem;
+  width:250px;
+  outline:none;
+}
+
+.cs-input-name input:focus {
+  outline:none;
+}
+
+.cs-input-name input::placeholder {
+  opacity:.3;
+}
+
+.cs-input-name button {
+
+}
+
+/*.cs-typewriter { 
+  display: inline-block;
+  border-right: .15em solid orange;  
+  width:25em;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: type 5s steps(40, end);
+  animation: type 5s steps(40, end);
+}
+
+/* The typing effect
+@keyframes type {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect 
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}*/

@@ -1,0 +1,284 @@
+.cs-modal-map {
+  position: absolute;
+  z-index: 6;
+  max-width: 960px;
+  width: 960px;
+  margin: 0 auto;
+  left: 50%;
+  margin-left: -700px;
+  min-height:339px;
+  top: 250px;
+  max-height: auto;
+  height: auto;
+  overflow:hidden;
+  background-color: #FFF;
+  border: 5px solid #FFF;
+}
+
+.cs-modal-map-inner > div {
+  position: absolute;
+  width:960px;
+  height:339px;
+  z-index: 7;
+  font-size:11px;
+  color: #FFF;
+  text-shadow:1px 1px 5px #000;
+  top: 0;
+  left: 0;
+}
+
+.cs-modal-map-inner > div > div {
+  position: absolute;
+  z-index: 9;
+  -webkit-transition: color .3s, font-size .3s;
+  -moz-transition: color .3s, font-size .3s;
+  -o-transition: color .3s, font-size .3s;
+  transition: color .3s, font-size .3s;
+}
+
+.depart {
+  color:yellow;
+
+}
+
+#hovDestination {
+  font-weight:bold;
+  font-size:20px;
+  background-color: #000;
+}
+
+.cs-plane {
+  display:none;
+  font-size:50px;
+}
+
+.cs-plane.cs-active {
+  animation-duration:3s;
+  display:block;
+  animation-name: plane;
+  animation-direction: alternate;
+  animation-iteration-count: 5;
+}
+
+@keyframes plane {
+  from {
+    left:0;
+    bottom:0;
+  }
+}
+ 
+.paris {
+  bottom: 200px;
+  left: 450px;
+}
+
+.cs-plane.cs-active.paris {
+  animation-name: paris;
+}
+
+@keyframes paris {
+  from {
+    bottom: 200px;
+    left: 450px;
+  }
+}
+
+.tokyo {
+  bottom:175px;
+  left: 780px;
+}
+
+.cs-plane.cs-active.tokyo {
+  animation-name: tokyo;
+}
+
+@keyframes tokyo {
+  from {
+    bottom:175px;
+    left: 780px;
+  }
+}
+
+.oslo {
+  bottom: 230px;
+  left: 470px;
+}
+
+.cs-plane.cs-active.oslo {
+  animation-name: oslo;
+}
+
+@keyframes oslo {
+  from {
+    bottom: 230px;
+    left: 470px;
+  }
+}
+
+.reykjavik {
+  bottom: 250px;
+  left: 400px;
+}
+
+.cs-plane.cs-active.reykjavik {
+  animation-name: reykjavik;
+}
+
+@keyframes reykjavik {
+  from {
+    bottom: 250px;
+    left: 400px;
+  }
+}
+
+.london {
+  bottom: 210px;
+  left: 430px;
+}
+
+.cs-plane.cs-active.london {
+  animation-name: london;
+}
+
+@keyframes london {
+  from {
+    bottom: 210px;
+    left: 430px;
+  }
+}
+
+.baghdad {
+  bottom: 150px;
+  left: 550px;
+}
+
+.cs-plane.cs-active.baghdad {
+  animation-name: baghdad;
+}
+
+@keyframes baghdad {
+  from {
+    bottom: 150px;
+    left: 550px;
+  }
+}
+
+.moscow {
+  bottom: 220px;
+  left: 530px;
+}
+
+.cs-plane.cs-active.moscow {
+  animation-name: moscow;
+}
+
+@keyframes moscow {
+  from {
+    bottom: 220px;
+    left: 530px;
+  }
+}
+
+.bamako {
+  bottom: 145px;
+  left: 420px;
+}
+
+.cs-plane.cs-active.bamako {
+  animation-name: bamako;
+}
+
+@keyframes bamako {
+  from {
+    bottom: 145px;
+    left: 420px;
+  }
+}
+
+.athens {
+  bottom: 175px;
+  left: 495px;
+}
+
+.cs-plane.cs-active.athens {
+  animation-name: athens;
+}
+
+@keyframes athens {
+  from {
+    bottom: 175px;
+    left: 495px;
+  }
+}
+
+.cairo {
+  bottom: 160px;
+  left: 500px;
+}
+
+.cs-plane.cs-active.cairo {
+  animation-name: cairo;
+}
+
+@keyframes cairo {
+  from {
+    bottom: 160px;
+    left: 500px;
+  }
+}
+
+.rome {
+  bottom: 185px;
+  left: 470px;
+}
+
+.cs-plane.cs-active.rome {
+  animation-name: rome;
+}
+
+@keyframes rome {
+  from {
+    bottom: 185px;
+    left: 470px;
+  }
+}
+
+.colombo {
+  bottom: 125px;
+  left: 638px;
+}
+
+.cs-plane.cs-active.colombo {
+  animation-name: colombo;
+}
+
+@keyframes colombo {
+  from {
+    bottom: 125px;
+    left: 638px;
+  }
+}
+
+.riode.janeiro {
+  bottom: 75px;
+  left: 315px;
+}
+
+.cs-plane.cs-active.riode.janeiro {
+  animation-name: janeiro;
+}
+
+@keyframes janeiro {
+  from {
+    bottom: 75px;
+    left: 315px;
+  }
+}
+
+
+/* Mobile */ 
+@media only screen and (max-width: 600px) {
+  .cs-modal-map {
+    visibility: hidden;
+  }
+}

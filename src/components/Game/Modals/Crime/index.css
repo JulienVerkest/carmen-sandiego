@@ -1,0 +1,115 @@
+.cs-crime {
+  height:300px;
+  position: absolute;
+  z-index: 6;
+  max-width: 417px;
+  width: 417px;
+  margin: 0 auto;
+  right:120px;
+  top:85px;
+  height:391px;
+  max-height: 391px;
+  overflow: none;
+  background-color: #000;
+  background-size: contain;
+  color:yellow;
+}
+
+.cs-crime-inner {
+  display:none;
+}
+
+.cs-crime-inner.cs-crime-block {
+  display:block
+}
+
+.cs-crime-form-item {
+  text-align: left;
+  margin: 2px 5px 0 55px;
+}
+
+.cs-crime-form-item:first-child {
+  margin-top:20px;
+}
+
+.cs-crime-form-item label {
+  margin-right:10px;
+  width:125px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.cs-crime-form-item select {
+  width: 185px;
+  font-size:.9rem;
+}
+
+.cs-modal-crime-close {
+  margin-left:10px;
+}
+
+.cs-crime-compute-gif {
+  display:none;
+  width: 117px;
+  height: 19px;
+  bottom: 117px;
+  position: absolute;
+  z-index:7;
+  left: 151px;
+}
+.cs-crime-compute-gif.cs-crime-computing-gif {
+  display:block;
+}
+
+/* list suspicious */
+.cs-warrant {
+  display:none;
+  font-size:12px;
+}
+
+.cs-warrant.cs-warrant-block {
+  display:block;
+}
+
+.cs-warrant-inner {
+  margin: 25px 45px 0 45px;
+}
+
+/* Mobile */ 
+@media only screen and (max-width: 600px) {
+  .cs-crime {
+    max-width: auto;
+    width: 99%;
+    background-image:none !important;
+    margin-left:0;
+    left:0;
+    top:0;
+  }
+  .cs-crime-form-item select {
+    width: 170px;
+  }
+  .cs-crime-compute-gif {
+    bottom: 124px;
+    left: 146px;
+    background-image:none !important;
+  }
+  .cs-modal-crime-compute,
+  .cs-modal-crime-close {
+    font-size:14px;
+  }
+  .cs-crime-form-item:first-child {
+    margin-top:25px;
+  }
+
+  .cs-crime-form-item label {
+    margin-right:10px;
+    width:125px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+  }
+
+  .cs-crime-form-item select {
+    width: 185px;
+    font-size:.9rem;
+  }
+}
