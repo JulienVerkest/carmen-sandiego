@@ -1,23 +1,44 @@
-# Carmen Sandiego with react 
 
-## Features
+#  Carmen Sandiego with react
 
-* Typemachine instructions  
-* 
+## The Game 
+Inspired by the original Carmen Sandiego 1990/1991 MS-DOS Version.  https://www.youtube.com/watch?v=bJFLONgDnDE
 
-## Available Scripts
+##  TO DO
+- [ ]  Save and Restore the state of the game in localStorage with possibily to rename each save
+- [ ]  Add animation when expiration time i.e. the date is superior at Sunday, 5pm. 
+- [ ]  Add animation when the user has a wrong warrant  
+- [ ]  Fix map animation plane when the user go back from a wrong destination  
+- [ ]  Compress and optimize mp4 animations and store them to cdn
+- [ ]  Fix french i18n translations : place, date, end messages, dossiers, typemachine, etc.
+- [ ]  Add shortcut keyboard 
 
-Run the game in dev mode to [http://localhost:3000](http://localhost:3000) with hot reload 
-### `yarn start` or `npm start`
+## Features 
+ 1. Typemachine interactive instructions divided through 20 steps. Main steps are: 
+	* Username input text
+	* New user ? Button yes or no (TO DO store user on remote)
+	* Start the case and follow the first instructions
+ 2. Typemachine at the end of the case. Fail or success. 
+ 3. At step 20, the case is starting. 
+ 4. Clues choose on modal with emojis and vilain animation + club Bubble 
+ 5. Destinations choosen on modal with emojis and map animation
+ 6. Crime computer with 5 forms select: Sex, Hobby, Feature, Hair, Vehicule 
+ 7. Dossiers of criminels from the menu
+ 8. Save and restore game with localStorage from the menu
+ 9. i18n English and French 
+ 10. Data of the case are stored onto a json files `GameData/Data/`
 
-### `yarn build` or `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##  Commands
 
-### `npm test`
+Run the game in dev mode to [http://localhost:3000](http://localhost:3000) with hot reload
+`yarn start` or `npm start`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+Builds the app for production to the `build` folder.
+`yarn build` or `npm run build`
+
+Launches the test runner in the interactive watch mode.
+`npm test`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
