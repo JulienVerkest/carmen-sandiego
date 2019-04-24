@@ -1,13 +1,15 @@
 // import React, { Component } from 'react';
 import React, { useState } from 'react';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import ModalDossiers from '../Modals/Dossiers';
+import ModalDossiers from './Dossiers';
 import './index.css';
+
+
 
 function Menu(props) {
   const [modalDossier, setModalDossier] = useState(true);
   const [lastOpenDossier, setLastOpenDossier] = useState(null);
-  const { lang, user, userRank, changeLang, Dossiers, Config  } = props;
+  const { lang, user, step, userRank, changeLang, Dossiers, Config, saveStateToLocalStorage, hydratestateFromLocalStorage } = props;
   const menu = Config[lang].menu;
   return(
     <div className="container cs-no-padding" >
@@ -15,10 +17,11 @@ function Menu(props) {
         { /* <Navbar.Brand onClick={() => setHidden(true)}>Carmen Sandiego {user}</Navbar.Brand> } */ }
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
+          <Nav className="mr-auto"> 
             <NavDropdown title={menu.entry1.name} id="basic-nav-dropdown">
               <NavDropdown.Item onClick={() => window.location.reload()} >{menu.entry1.item2}</NavDropdown.Item>
-              <NavDropdown.Item  disabled >{menu.entry1.item3}</NavDropdown.Item>
+              <NavDropdown.Item disabled={step < 20 ? true : false}  onClick={() => saveStateToLocalStorage()} >{menu.entry1.item3}</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setTimeout(() => hydratestateFromLocalStorage(), 1000)} >Restore last save </NavDropdown.Item>
               <NavDropdown.Item disabled  >{menu.entry1.item4}</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item onClick={() => alert('Julien Verkest 2019 - ReactJS')}>{menu.entry1.item1}</NavDropdown.Item>

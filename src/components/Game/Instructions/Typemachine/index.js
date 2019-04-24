@@ -22,19 +22,23 @@ class Typemachine extends Component {
   }
 
   playSound() {
-    if (this.mySound.duration > 0 && !this.mySound.paused) {
+    if(this.mySound){
+      if (this.mySound.duration > 0 && !this.mySound.paused) {
 
-    }
-    else {
-      this.mySound.play();
+      }
+      else {
+        this.mySound.play();
+      }
     }
   } 
 
   pauseSound() { 
-    if (this.mySound.duration > 0 && !this.mySound.paused) {
-      
-    } else {
-      this.mySound.pause();
+    if(this.mySound){
+      if (this.mySound.duration > 0 && !this.mySound.paused) {
+        
+      } else {
+        this.mySound.pause();
+      }
     }
   }
 

@@ -29,7 +29,6 @@ const initialState = {
   step: 1,
   place: 'Headquarters',
   mydate: startDate,
-  isSound: true,
   isViewClue: false,
   isViewCrime: false,
   isViewArrest: false,
@@ -226,12 +225,24 @@ class Interface extends Component {
     this.changePlace(Cases[this.state.userCase][this.state.lang].steps[0].city.name);
   }
 
+  saveStateToLocalStorage = (nme) => {
+    let mySave = 'mysave';
+    localStorage.setItem(mySave, JSON.stringify(this.state));
+  }
+
+  hydratestateFromLocalStorage = () => {
+    if (localStorage.hasOwnProperty('mysave')) {
+      let value = JSON.parse(localStorage.getItem('mysave'));
+      value.mydate = moment(value.mydate)
+      this.setState(value)
+    }
+  }
 
   render() {
-    const { user, lang, isUserValid, isNewUser, userRank, step, mydate, place, isSound, isViewClue, clue, userCase, userStep, isWrongDestination, isExpirationTime, isViewCrime, isViewArrest, sex, hair, vehicule, feature, hobby, warrant, HISTORY } = this.state
+    const { user, lang, isUserValid, isNewUser, userRank, step, mydate, place, isViewClue, clue, userCase, userStep, isWrongDestination, isExpirationTime, isViewCrime, isViewArrest, sex, hair, vehicule, feature, hobby, warrant, HISTORY } = this.state
     return (
       <div>
-        <Menu user={user} Dossiers={Dossiers} Config={Config} lang={lang} changeLang={this.changeLang} userRank={userRank}></Menu>
+        <Menu user={user} step={step} saveStateToLocalStorage={this.saveStateToLocalStorage} hydratestateFromLocalStorage={this.hydratestateFromLocalStorage}  Dossiers={Dossiers} Config={Config} lang={lang} changeLang={this.changeLang} userRank={userRank}></Menu>
         <Container>
           <Row id="cs">
             <Col md="5">
@@ -254,7 +265,6 @@ class Interface extends Component {
                           step={step}
                           createUser={this.createUser}
                           loadUser={this.loadUser}
-                          isSound={isSound}
                           Cases={Cases}
                           lang={lang}
                           userCase={userCase}

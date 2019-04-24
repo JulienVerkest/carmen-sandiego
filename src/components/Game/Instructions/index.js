@@ -36,7 +36,6 @@ class Instructions extends Component {
                 createUser={this.props.createUser}
                 loadUser={this.props.loadUser}
                 setScroll={this.setScroll}
-                isSound={this.props.isSound}
                 Config={this.props.Config}
                 lang={this.props.lang}
               />
@@ -50,7 +49,6 @@ class Instructions extends Component {
               userRank={this.props.userRank}
               user={this.props.user}
               setScroll={this.setScroll}
-              isSound={this.props.isSound}
               Config={this.props.Config}
               Cases={this.props.Cases}
               lang={this.props.lang}
@@ -65,7 +63,6 @@ class Instructions extends Component {
               step={this.props.step}
               onChangeStep={this.props.onChangeStep}
               setScroll={this.setScroll}
-              isSound={this.props.isSound}
               Config={this.props.Config}
               Cases={this.props.Cases}
               lang={this.props.lang}
@@ -82,7 +79,6 @@ class Instructions extends Component {
               step={this.props.step}
               onChangeStep={this.props.onChangeStep}
               setScroll={this.setScroll}
-              isSound={this.props.isSound}
               Config={this.props.Config}
               Cases={this.props.Cases}
               lang={this.props.lang}

@@ -5,14 +5,14 @@ import ButtonNext from '../ButtonNext';
 
 class Step1 extends Component {
   render() {
-    const {onChangeStep, onChangeUser, step, isUserValid, user, isSound, Config, lang} = this.props;
+    const {onChangeStep, onChangeUser, step, isUserValid, user, Config, lang} = this.props;
     const userLang = Config[lang].user;
     return (
       <div>
-        <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring={userLang.step1} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
+        <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring={userLang.step1} step={step} changeStep={onChangeStep} ></Typemachine>
         {
           step > 1
-          ? <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring={userLang.step2} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
+          ? <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring={userLang.step2} step={step} changeStep={onChangeStep} ></Typemachine>
           : ''
         }
         {
@@ -32,14 +32,14 @@ class Step2 extends Component {
     this.props.setScroll(); // set Scroll
   }
   render() {
-    const {onChangeStep, createUser, loadUser, step, isSound, Config, lang} = this.props;
+    const {onChangeStep, createUser, loadUser, step, Config, lang} = this.props;
     const userLang = Config[lang];
     return (
       <div>
-        <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring={userLang.user.step4} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
+        <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring={userLang.user.step4} step={step} changeStep={onChangeStep} ></Typemachine>
         {
           step > 4 
-          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring={userLang.user.step5} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
+          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring={userLang.user.step5} step={step} changeStep={onChangeStep} ></Typemachine>
           : ''
         }   
         {
@@ -61,23 +61,23 @@ class Step3 extends Component {
   }
 
   render() {
-    const {onChangeStep, step, isNewUser, user, userRank, isSound, Config, lang} = this.props;
+    const {onChangeStep, step, isNewUser, user, userRank, Config, lang} = this.props;
     const userLang = Config[lang];
     return (
       <div >
         {
           isNewUser 
-          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`${userLang.user.step7a}, ${user}`} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
-          : <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`${userLang.user.step7b}, ${user}`} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
+          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`${userLang.user.step7a}, ${user}`} step={step} changeStep={onChangeStep} ></Typemachine>
+          : <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`${userLang.user.step7b}, ${user}`} step={step} changeStep={onChangeStep} ></Typemachine>
         }
         {
           step > 7 
-          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`${userLang.user.step8} ${userRank}`} step={step} changeStep={onChangeStep} isSound={isSound}></Typemachine>
+          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`${userLang.user.step8} ${userRank}`} step={step} changeStep={onChangeStep} ></Typemachine>
           : ''
         }
         {
           step > 8
-          ? <ButtonNext step={step} mb={'mb-4'} setScroll={this.props.setScroll} onChangeStep={onChangeStep} nextStep={10} isSound={isSound}>{userLang.buttons.start} </ButtonNext>
+          ? <ButtonNext step={step} mb={'mb-4'} setScroll={this.props.setScroll} onChangeStep={onChangeStep} nextStep={10} >{userLang.buttons.start} </ButtonNext>
           : ''
         }
       </div>
@@ -96,7 +96,6 @@ class User extends Component {
           isUserValid={this.props.isUserValid}
           user={this.props.user}
           setScroll={this.props.setScroll}
-          isSound={this.props.isSound}
           Config={this.props.Config}
           lang={this.props.lang}
         />
@@ -107,8 +106,7 @@ class User extends Component {
               loadUser={this.props.loadUser} 
               step={this.props.step} 
               onChangeStep={this.props.onChangeStep} 
-              setScroll={this.props.setScroll}  
-              isSound={this.props.isSound}
+              setScroll={this.props.setScroll}
               Config={this.props.Config}
               lang={this.props.lang}
             /> 
@@ -122,8 +120,7 @@ class User extends Component {
               step={this.props.step} 
               user={this.props.user}
               userRank={this.props.userRank}
-              setScroll={this.props.setScroll}  
-              isSound={this.props.isSound}
+              setScroll={this.props.setScroll}
               Config={this.props.Config}
               lang={this.props.lang}
             />
