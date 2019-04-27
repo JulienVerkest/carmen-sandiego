@@ -22,19 +22,19 @@ class Vilain extends Component {
     const { userCase, userStep, Cases, lang } = this.props;
     if(userStep > 0 && userStep < Cases[userCase][lang].steps.length - 1) {
       if(userStep % 3 === 0) { 
-        this.setState({vilain: "http://carmen.tulear.fr/assets/vilains/vilain-3.mp4"});
+        this.setState({vilain: "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/vilain-3-compress.mp4"});
       } else if(userStep % 2 === 0) { 
-        this.setState({vilain: "http://carmen.tulear.fr/assets/vilains/vilain-2.mp4"});
+        this.setState({vilain: "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/vilain-2-compress.mp4"});
       }
       else {
-        this.setState({vilain: "http://carmen.tulear.fr/assets/vilains/vilain-1.mp4"});
+        this.setState({vilain: "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/vilain-1-compress.mp4"});
       }
       
     } else if (this.state.display && Cases[userCase][lang].steps.length - 1 === userStep) {
-      this.setState({vilain: "http://carmen.tulear.fr/assets/vilains/hache.mp4"});
+      this.setState({vilain: "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/hache-compress.mp4"});
     }
     else {
-      this.setState({vilain: "http://carmen.tulear.fr/assets/vilains/vilain-1.mp4"});
+      this.setState({vilain: "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/vilain-1-compress.mp4"});
     }
 
     if(this.myVideo) {

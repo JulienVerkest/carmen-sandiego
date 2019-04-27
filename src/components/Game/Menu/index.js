@@ -8,6 +8,7 @@ import './index.css';
 
 function Menu(props) {
   const [modalDossier, setModalDossier] = useState(true);
+  const [saveDone, setSaveDone] = useState(true)
   const [lastOpenDossier, setLastOpenDossier] = useState(null);
   const { lang, user, step, userRank, changeLang, Dossiers, Config, saveStateToLocalStorage, hydratestateFromLocalStorage } = props;
   const menu = Config[lang].menu;
@@ -20,9 +21,8 @@ function Menu(props) {
           <Nav className="mr-auto"> 
             <NavDropdown title={menu.entry1.name} id="basic-nav-dropdown">
               <NavDropdown.Item onClick={() => window.location.reload()} >{menu.entry1.item2}</NavDropdown.Item>
-              <NavDropdown.Item disabled={step < 20 ? true : false}  onClick={() => saveStateToLocalStorage()} >{menu.entry1.item3}</NavDropdown.Item>
-              <NavDropdown.Item onClick={() => setTimeout(() => hydratestateFromLocalStorage(), 1000)} >Restore last save </NavDropdown.Item>
-              <NavDropdown.Item disabled  >{menu.entry1.item4}</NavDropdown.Item>
+              <NavDropdown.Item disabled={step < 20 ? true : false}  onClick={() => { setSaveDone(false);setTimeout(() => {saveStateToLocalStorage();setSaveDone(true); }, 2000); }} >{menu.entry1.item3}</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setTimeout(() => hydratestateFromLocalStorage(), 2000)} >{menu.entry1.item4} </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item onClick={() => alert('Julien Verkest 2019 - ReactJS')}>{menu.entry1.item1}</NavDropdown.Item>
             </NavDropdown>
@@ -40,7 +40,7 @@ function Menu(props) {
           </Nav>
         </Navbar.Collapse>
         <span className="navbar-text">
-          {userRank} {user}
+          {!saveDone ? Config[lang].menu.save : ''} {userRank} {user}
         </span>
       </Navbar>
       {

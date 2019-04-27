@@ -28,6 +28,8 @@ class ModalMap extends Component {
       'y': 339 - this.myDiv.getElementsByClassName('depart')[0].offsetTop
     }
 
+    console.log('Depart:'+ depart)
+
     this.props.destinations.forEach((item, index) => {
       let marker = {
         'city': item,

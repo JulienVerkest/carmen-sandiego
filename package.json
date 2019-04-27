@@ -1,5 +1,6 @@
 {
   "name": "carmen-sandiego",
+  "homepage": "https://www.julien-verkest.fr/carmen-sandiego-reactjs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -25,5 +26,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "jest": "^24.7.1",
+    "react-test-renderer": "^16.8.6"
+  }
 }

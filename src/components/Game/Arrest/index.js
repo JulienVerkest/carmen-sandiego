@@ -29,7 +29,7 @@ class Arrest extends Component {
         { 
           warrant === Cases[userCase][lang].thief
           ? <video className="cs-arrest" width="662" autoPlay height="470" ref={this.setMyVideo}>
-              <source src="http://carmen.tulear.fr/assets/arrest/arrest.mp4" type="video/mp4"></source>
+              <source src="https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/arrest/arrest-compress.mp4" type="video/mp4"></source>
             </video>
           : <p className="cs-fail-message">
               <img src={jail} alt=""/>

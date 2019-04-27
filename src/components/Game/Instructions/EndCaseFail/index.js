@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Typemachine from '../Typemachine';
+import Typewriter from '../Typewriter';
 import './index.css';
 
 class EndCaseFail extends Component {
@@ -7,11 +7,11 @@ class EndCaseFail extends Component {
     const {onChangeStep, step, Cases, userCase, lang, Config, isExpirationTime } = this.props;
     return (
       <div>
-        <Typemachine mb={'mb-4'}  setScroll={this.props.setScroll} mystring={Cases[userCase][lang].endFail.loser} step={step} changeStep={onChangeStep} > </Typemachine>
+        <Typewriter mb={'mb-4'}  setScroll={this.props.setScroll} mystring={Config[lang].endFail.loser} step={step} changeStep={onChangeStep} > </Typewriter>
         {
           step > 21 && isExpirationTime
           ? <div>
-              <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring={Cases[userCase][lang].endFail.expiration} step={step} changeStep={onChangeStep} > </Typemachine>
+              <Typewriter mb={'mb-4'} setScroll={this.props.setScroll} mystring={Config[lang].endFail.expiration} step={step} changeStep={onChangeStep} > </Typewriter>
               <button onClick={() => this.props.restart()}>{Config[lang].buttons.restart}</button>  
              </div>
           : ''
@@ -19,7 +19,7 @@ class EndCaseFail extends Component {
         {
           step > 21 && !isExpirationTime
           ? <div>
-              <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring={`${Cases[userCase][lang].endFail.noWarrant} ${Cases[userCase][lang].thief}`} step={step} changeStep={onChangeStep} > </Typemachine>
+              <Typewriter mb={'mb-4'} setScroll={this.props.setScroll} mystring={`${Config[lang].endFail.noWarrant} ${Cases[userCase][lang].thief}`} step={step} changeStep={onChangeStep} > </Typewriter>
               <button onClick={() => this.props.restart()}>{Config[lang].buttons.restart}</button>  
              </div>
           : ''

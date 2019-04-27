@@ -228,23 +228,11 @@ const Cases = [
             }
           ],
           "destinations": []
-        },
+        }
       ],
       "thief": "Dazzle Annie Nonker",
       "endSuccess": {
-        "wait": "oh wait a minute...",
-        "thanks1": "Thanks to your help, the",
-        "thanks2": "police have apprehended",
-        "thanks3": "had the loot, the elevator from the Eiffel Tower, which will be returned to the grateful residents of Paris.",
-        "thanks4": "We here at Interpol thank you to for your good work on this case.",
-        "thanks5": "Good job,",
-        "thanks6": "you have earned a promotion.",
-        "ready": "Ready for your next case ?"
-      },
-      "endFail": {
-        "loser": "LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER!  ",
-        "timeOut": "Expiration time",
-        "noWarrant": "You have no warrant to arrest "
+        "thanks3": "had the loot, the elevator from the Eiffel Tower, which will be returned to the grateful residents of Paris."
       }
     },
     "fr": {
@@ -472,20 +460,11 @@ const Cases = [
             }
           ],
           "destinations": []
-        },
+        }
       ],
       "thief": "Dazzle Annie Nonker",
       "endSuccess": {
-        "wait": "oh wait a minute...",
-        "thanks1": "Merci pour votre aide, la",
-        "thanks2": "police a arrêté",
-        "thanks3": "had the loot, the elevator from the Eiffel Tower, which will be returned to the grateful residents of Paris.",
-        "thanks4": "We here at Interpol thank you to for your good work on this case.",
-        "thanks5": "Beau boulot,",
-        "thanks6": "you have earned a promotion.",
-      },
-      "endFail": {
-
+        "thanks3": "a le butin, the elevator from the Eiffel Tower, which will be returned to the grateful residents of Paris."
       }
     }
   }

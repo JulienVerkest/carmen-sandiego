@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
-import Typemachine from '../Typemachine';
+import Typewriter from '../Typewriter';
 import ButtonNext from '../ButtonNext';
 
 class Step1 extends Component {
@@ -9,10 +9,10 @@ class Step1 extends Component {
     const userLang = Config[lang].user;
     return (
       <div>
-        <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring={userLang.step1} step={step} changeStep={onChangeStep} ></Typemachine>
+        <Typewriter mb={'mb-0'} setScroll={this.props.setScroll} mystring={userLang.step1} step={step} changeStep={onChangeStep} ></Typewriter>
         {
           step > 1
-          ? <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring={userLang.step2} step={step} changeStep={onChangeStep} ></Typemachine>
+          ? <Typewriter mb={'mb-0'} setScroll={this.props.setScroll} mystring={userLang.step2} step={step} changeStep={onChangeStep} ></Typewriter>
           : ''
         }
         {
@@ -36,10 +36,10 @@ class Step2 extends Component {
     const userLang = Config[lang];
     return (
       <div>
-        <Typemachine mb={'mb-0'} setScroll={this.props.setScroll} mystring={userLang.user.step4} step={step} changeStep={onChangeStep} ></Typemachine>
+        <Typewriter mb={'mb-0'} setScroll={this.props.setScroll} mystring={userLang.user.step4} step={step} changeStep={onChangeStep} ></Typewriter>
         {
           step > 4 
-          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring={userLang.user.step5} step={step} changeStep={onChangeStep} ></Typemachine>
+          ? <Typewriter mb={'mb-4'} setScroll={this.props.setScroll} mystring={userLang.user.step5} step={step} changeStep={onChangeStep} ></Typewriter>
           : ''
         }   
         {
@@ -67,12 +67,12 @@ class Step3 extends Component {
       <div >
         {
           isNewUser 
-          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`${userLang.user.step7a}, ${user}`} step={step} changeStep={onChangeStep} ></Typemachine>
-          : <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`${userLang.user.step7b}, ${user}`} step={step} changeStep={onChangeStep} ></Typemachine>
+          ? <Typewriter mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`${userLang.user.step7a}, ${user}`} step={step} changeStep={onChangeStep} ></Typewriter>
+          : <Typewriter mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`${userLang.user.step7b}, ${user}`} step={step} changeStep={onChangeStep} ></Typewriter>
         }
         {
           step > 7 
-          ? <Typemachine mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`${userLang.user.step8} ${userRank}`} step={step} changeStep={onChangeStep} ></Typemachine>
+          ? <Typewriter mb={'mb-4'} setScroll={this.props.setScroll} mystring ={`${userLang.user.step8} ${userRank}`} step={step} changeStep={onChangeStep} ></Typewriter>
           : ''
         }
         {

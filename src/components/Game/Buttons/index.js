@@ -4,6 +4,7 @@ import ModalDestinations from '../Modals/Destinations';
 import ModalMap from '../Modals/Map';
 import ModalClues from '../Modals/Clues';
 import ModalCrime from '../Modals/Crime';
+import soundHover from './hover.mp3';
 
 class Buttons extends Component {
   constructor(props){
@@ -20,7 +21,10 @@ class Buttons extends Component {
       isPlane: false,
       markers: null
     }
-
+    this.soundHover = null;
+    this.setSoundHover = element => {
+      this.soundHover = element;
+    };
     this.goTo = this.goTo.bind(this);
   }
 
@@ -121,9 +125,9 @@ class Buttons extends Component {
   }
 
   render() {
-    const { lang, Cases, viewClue, viewCrime, viewArrest, changeDate, userCase, userStep, isWrongDestination, place, changeSex, changeHobby, changeHair, changeFeature, changeVehicule, sex, hair, hobby, vehicule, feature, changeWarrant } = this.props;
+    const { lang, Cases, viewClue, viewCrime, viewArrest, changeDate, userCase, userStep, isWrongDestination, tmpDestination, place, changeSex, changeHobby, changeHair, changeFeature, changeVehicule, sex, hair, hobby, vehicule, feature, changeWarrant } = this.props;
     const destinations = isWrongDestination ? [Cases[userCase][lang].steps[userStep].city.name] : Cases[userCase][lang].steps[userStep].destinations;
-    const cityStart = isWrongDestination ? place : Cases[userCase][lang].steps[userStep].city.name;
+    const cityStart = isWrongDestination ? tmpDestination : Cases[userCase][lang].steps[userStep].city.name;
     const clues = isWrongDestination ? [] : Cases[userCase][lang].steps[userStep].clues;
     return (
       <div>
@@ -133,18 +137,21 @@ class Buttons extends Component {
           : ''
         }
         <div className="cs-btns">
-          <div className={this.state.isShowModalDestinations ? 'cs-btn cs-btn-hidden-mobile cs-btn-hide ' : 'cs-btn cs-btn-see cs-btn-hidden-mobile'} onClick={this.showModalDestinations}>
+          <div onMouseEnter={() => this.soundHover.play()} className={this.state.isShowModalDestinations ? 'cs-btn cs-btn-hidden-mobile cs-btn-hide ' : 'cs-btn cs-btn-see cs-btn-hidden-mobile'} onClick={this.showModalDestinations}>
             <div className="cs-btn-inner" ></div>
           </div>
-          <div className={this.state.isShowModalDepart ? 'cs-btn cs-btn-depart cs-btn-depart-hide' : 'cs-btn cs-btn-depart  cs-btn-depart-show'} onClick={this.showModalDepart}>
+          <div onMouseEnter={() => this.soundHover.play()} className={this.state.isShowModalDepart ? 'cs-btn cs-btn-depart cs-btn-depart-hide' : 'cs-btn cs-btn-depart  cs-btn-depart-show'} onClick={this.showModalDepart}>
             <div className="cs-btn-inner" ></div>
           </div>
-          <div className={this.state.isShowModalClue ? 'cs-btn cs-btn-search cs-btn-hide' : 'cs-btn cs-btn-search cs-btn-see'} onClick={this.showModalClue}>
+          <div onMouseEnter={() => this.soundHover.play()} className={this.state.isShowModalClue ? 'cs-btn cs-btn-search cs-btn-hide' : 'cs-btn cs-btn-search cs-btn-see'} onClick={this.showModalClue}>
             <div className="cs-btn-inner"></div>
           </div>
-          <div className={this.state.isShowModalCrime ? 'cs-btn cs-btn-crime cs-btn-hide' : 'cs-btn cs-btn-crime cs-btn-see'} onClick={this.showModalCrime}>
+          <div onMouseEnter={() => this.soundHover.play()} className={this.state.isShowModalCrime ? 'cs-btn cs-btn-crime cs-btn-hide' : 'cs-btn cs-btn-crime cs-btn-see'} onClick={this.showModalCrime}>
             <div className="cs-btn-inner"></div>
           </div>        
+        </div>
+        <div>
+          <audio preload="auto" ref={this.setSoundHover} src={soundHover}> </audio>
         </div>
         {
           this.state.isShowModalDestinations
@@ -157,12 +164,17 @@ class Buttons extends Component {
           : ''
         }
         {
-          this.state.isShowModalMap
+          this.state.isShowModalMap && !isWrongDestination
           ? <ModalMap isPlane={this.state.isPlane} place={place} hoverDestination={this.state.hoverDestination} changeMarkersDestinations={this.changeMarkersDestinations} lang={lang} cityStart={cityStart} destinations={destinations}></ModalMap>
           : ''
         }
         {
-          this.state.isShowModalClue
+          this.state.isShowModalMap && isWrongDestination
+          ? <ModalMap isPlane={this.state.isPlane} place={place} hoverDestination={this.state.hoverDestination} changeMarkersDestinations={this.changeMarkersDestinations} lang={lang} cityStart={cityStart} destinations={destinations}></ModalMap>
+          : ''
+        }
+        {
+          this.state.isShowModalClue 
           ? <ModalClues  lang={lang} clues={clues} viewClue={viewClue} viewArrest={viewArrest} hideModalClue={this.hideModalClue} ></ModalClues>
           : ''
         }

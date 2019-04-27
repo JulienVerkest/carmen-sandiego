@@ -33,10 +33,10 @@ const initialState = {
   isViewCrime: false,
   isViewArrest: false,
   isWrongDestination: false,
+  tmpDestination: '',
   isExpirationTime: false,
   clue: '',
   warrant: null,
-  crime: null,
   sex: '',
   hobby: '',
   hair: '',
@@ -202,11 +202,13 @@ class Interface extends Component {
   checkDestination = (destination) => {
     if(this.state.isWrongDestination) {
       this.setState({isWrongDestination: false});
+      this.setState({tmpDestination: ''});
     }
     else if(Cases[this.state.userCase][this.state.lang].steps[this.state.userStep + 1].city.name === destination) {
       this.nextDestination();
     } else {
       this.setState({isWrongDestination: true});
+      this.setState({tmpDestination: destination});
     }
   }
 
@@ -239,7 +241,7 @@ class Interface extends Component {
   }
 
   render() {
-    const { user, lang, isUserValid, isNewUser, userRank, step, mydate, place, isViewClue, clue, userCase, userStep, isWrongDestination, isExpirationTime, isViewCrime, isViewArrest, sex, hair, vehicule, feature, hobby, warrant, HISTORY } = this.state
+    const { user, lang, isUserValid, isNewUser, userRank, step, mydate, place, isViewClue, clue, userCase, userStep, isWrongDestination, tmpDestination, isExpirationTime, isViewCrime, isViewArrest, sex, hair, vehicule, feature, hobby, warrant, HISTORY } = this.state
     return (
       <div>
         <Menu user={user} step={step} saveStateToLocalStorage={this.saveStateToLocalStorage} hydratestateFromLocalStorage={this.hydratestateFromLocalStorage}  Dossiers={Dossiers} Config={Config} lang={lang} changeLang={this.changeLang} userRank={userRank}></Menu>
@@ -323,6 +325,7 @@ class Interface extends Component {
                        userCase={userCase} 
                        userStep={userStep}
                        isWrongDestination={isWrongDestination}
+                       tmpDestination={tmpDestination}
                        place={place}
                        lang={lang} 
                        Cases={Cases} 

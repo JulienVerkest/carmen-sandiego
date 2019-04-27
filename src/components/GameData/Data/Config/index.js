@@ -15,7 +15,7 @@ const Config = {
         "item1": "About this game",
         "item2": "New",
         "item3": "Save", 
-        "item4": "Quit"
+        "item4": "Restore"
       },
       "entry2": {
         "name": "Dossiers"
@@ -25,7 +25,9 @@ const Config = {
         "item1": "Set lang to en (default)",
         "item2": "Set lang to fr",
         "item3": "Sound on/off"
-      }
+      },
+      "save": "Save successful! ",
+      "restore": "Save loaded! "
     },
     "buttons": {
       "start": "Press the button to start the investigation",
@@ -94,6 +96,20 @@ const Config = {
       "none": "The information provided eliminates all possible suspects!",
       "nowarrant": "No warrant has been issued.",
       "suspects" : " suspects found:"
+    },
+    "endSuccess": {
+      "wait": "oh wait a minute...",
+      "thanks1": "Thanks to your help, the",
+      "thanks2": "police have apprehended",
+      "thanks4": "We here at Interpol thank you to for your good work on this case.",
+      "thanks5": "Good job,",
+      "thanks6": "you have earned a promotion.",
+      "ready": "Ready for your next case ?"
+    },
+    "endFail": {
+      "loser": "LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER!  ",
+      "timeOut": "Expiration time",
+      "noWarrant": "You have no warrant to arrest "
     } 
   },
   "fr":{
@@ -112,7 +128,7 @@ const Config = {
         "item1": "Crédits du jeu",
         "item2": "Nouveau",
         "item3": "Enregistrer", 
-        "item4": "Quitter"
+        "item4": "Restaurer"
       },
       "entry2": {
         "name": "Dossiers"
@@ -122,7 +138,8 @@ const Config = {
         "item1": "Passer la langue en anglais",
         "item2": "Passer la langue en français (x)",
         "item3": "Activer / désactiver le son"
-      }
+      },
+      "save": "Sauvegarde effectuée ! "
     },
     "buttons": {
       "start": "Appuyer sur le bouton pour commencer l'enquête",
@@ -191,6 +208,19 @@ const Config = {
       "none": "Les informations saisies éliminent tous les suspects",
       "nowarrant": "Aucun mandat d'arrêt délivré.",
       "suspects" : " suspects trouvés :"
+    },
+    "endSuccess": {
+      "wait": "oh attendez 1 seconde...",
+      "thanks1": "Merci pour votre aide, la",
+      "thanks2": "police a arrêté",
+      "thanks4": "Interpol vous remercie pour votre travail sur cette enquête ",
+      "thanks5": "Beau boulot,",
+      "thanks6": "Vous avez mérité une promotion "
+    },
+    "endFail": {
+      "loser": "Mauvais ! Nul ! Perdant ! Victime ! LOSER ! Mauvais policier ",
+      "timeOut": "Temps écoulé",
+      "noWarrant": "Vous n'avez pas de mandat d'arrêt"
     }
   },
 };

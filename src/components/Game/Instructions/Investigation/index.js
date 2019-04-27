@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Typemachine from '../Typemachine';
+import Typewriter from '../Typewriter';
 import ButtonNext from '../ButtonNext';
 
 class Investigation extends Component {
@@ -10,15 +10,15 @@ class Investigation extends Component {
     const { setScroll, step, onChangeStep, user, userRank, Cases, lang, userCase, Config } = this.props;
     return (
       <div>
-        <Typemachine mb={'mb-4'} setScroll={setScroll} mystring={Cases[userCase][lang].start[0]} step={step} changeStep={onChangeStep} > </Typemachine>
+        <Typewriter mb={'mb-4'} setScroll={setScroll} mystring={Cases[userCase][lang].start[0]} step={step} changeStep={onChangeStep} > </Typewriter>
         {
           step > 10
-          ? <Typemachine mb={'mb-8'} setScroll={setScroll} mystring={Cases[userCase][lang].start[1]} step={step} changeStep={onChangeStep} > </Typemachine>
+          ? <Typewriter mb={'mb-8'} setScroll={setScroll} mystring={Cases[userCase][lang].start[1]} step={step} changeStep={onChangeStep} > </Typewriter>
           : ''
         }
         {
           step > 11
-          ? <Typemachine mb={'mb-4'} setScroll={setScroll} mystring={Cases[userCase][lang].start[2]}   step={step} changeStep={onChangeStep}  > </Typemachine>
+          ? <Typewriter mb={'mb-4'} setScroll={setScroll} mystring={Cases[userCase][lang].start[2]}   step={step} changeStep={onChangeStep}  > </Typewriter>
           : ''
         }
         {
@@ -28,12 +28,12 @@ class Investigation extends Component {
         }
         {
           step > 13
-          ? <Typemachine mb={'mb-8'} setScroll={setScroll} mystring={Cases[userCase][lang].start[3]} step={step} changeStep={onChangeStep} > </Typemachine>
+          ? <Typewriter mb={'mb-8'} setScroll={setScroll} mystring={Cases[userCase][lang].start[3]} step={step} changeStep={onChangeStep} > </Typewriter>
           : ''
         }
         {
           step > 14
-          ? <Typemachine mb={'mb-8'} setScroll={setScroll} mystring={Cases[userCase][lang].start[4]}  step={step} changeStep={onChangeStep} > </Typemachine>
+          ? <Typewriter mb={'mb-8'} setScroll={setScroll} mystring={Cases[userCase][lang].start[4]}  step={step} changeStep={onChangeStep} > </Typewriter>
           : ''
         }
         {
@@ -43,12 +43,12 @@ class Investigation extends Component {
         }
         {
           step > 16
-          ? <Typemachine mb={'mb-8'} setScroll={setScroll} mystring={Cases[userCase][lang].start[5]} step={step} changeStep={onChangeStep} > </Typemachine>
+          ? <Typewriter mb={'mb-8'} setScroll={setScroll} mystring={Cases[userCase][lang].start[5]} step={step} changeStep={onChangeStep} > </Typewriter>
           : ''
         }
         {
         step > 17
-          ? <Typemachine mb={'mb-8'} setScroll={setScroll} mystring={`${Cases[userCase][lang].start[6]} ${userRank} ${user} `}  step={step} changeStep={onChangeStep} > </Typemachine>
+          ? <Typewriter mb={'mb-8'} setScroll={setScroll} mystring={`${Cases[userCase][lang].start[6]} ${userRank} ${user} `}  step={step} changeStep={onChangeStep} > </Typewriter>
           : ''
         }
         {
