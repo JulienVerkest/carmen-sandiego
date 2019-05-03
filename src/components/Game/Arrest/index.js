@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import suspicious from './suspicious.gif';
 // import arrest from './arrest.mp4';
-import jail from './prison-empty.jpg'
+// import jail from './prison-empty.jpg'
 import './index.css';
 
 class Arrest extends Component {
@@ -24,17 +24,12 @@ class Arrest extends Component {
 
   render(){
     const { warrant, Cases, lang, userCase } = this.props;
+    let arrestOrFail = warrant === Cases[userCase][lang].thief ? 'arrest-compress.mp4' : 'fail-compress.mp4';
     return(
       <div>
-        { 
-          warrant === Cases[userCase][lang].thief
-          ? <video className="cs-arrest" width="662" autoPlay height="470" ref={this.setMyVideo}>
-              <source src="https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/arrest/arrest-compress.mp4" type="video/mp4"></source>
-            </video>
-          : <p className="cs-fail-message">
-              <img src={jail} alt=""/>
-            </p>
-        }
+        <video className="cs-arrest" width="662" autoPlay height="470" ref={this.setMyVideo}>
+          <source src={`https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/arrest/${arrestOrFail}`} type="video/mp4"></source>
+        </video>
       </div>
     )
   }

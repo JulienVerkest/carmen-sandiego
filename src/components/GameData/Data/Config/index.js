@@ -21,7 +21,7 @@ const Config = {
         "name": "Dossiers"
       },
       "entry3": {
-        "name": "Config",
+        "name": "Options",
         "item1": "Set lang to en (default)",
         "item2": "Set lang to fr",
         "item3": "Sound on/off"
@@ -110,6 +110,10 @@ const Config = {
       "loser": "LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER! LOSER!  ",
       "timeOut": "Expiration time",
       "noWarrant": "You have no warrant to arrest "
+    },
+    "credits": {
+      "name": "Julien Verkest",
+      "infos": "April 2019 all rights reserved"
     } 
   },
   "fr":{
@@ -134,7 +138,7 @@ const Config = {
         "name": "Dossiers"
       },
       "entry3": {
-        "name": "Configuration",
+        "name": "Options",
         "item1": "Passer la langue en anglais",
         "item2": "Passer la langue en français (x)",
         "item3": "Activer / désactiver le son"
@@ -221,7 +225,11 @@ const Config = {
       "loser": "Mauvais ! Nul ! Perdant ! Victime ! LOSER ! Mauvais policier ",
       "timeOut": "Temps écoulé",
       "noWarrant": "Vous n'avez pas de mandat d'arrêt"
-    }
+    },
+    "credits": {
+      "name": "Julien Verkest",
+      "infos": "Avril 2019 tous droits réservés"
+    } 
   },
 };
 

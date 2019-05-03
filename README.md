@@ -7,7 +7,7 @@ Inspired by the original Carmen Sandiego 1990/1991 MS-DOS Version.  https://www.
 ##  TO DO
 - [ ]  Save and Restore the state of the game in localStorage with possibily to rename each save
 - [ ]  Add animation when expiration time i.e. the date is superior at Sunday, 5pm. 
-- [ ]  Add animation when the user has a wrong warrant  
+- [x]  Add animation when the user has a wrong warrant  
 - [x]  Fix map animation plane when the user go back from a wrong destination  
 - [ ]  Compress and optimize mp4 animations, mp3 sounds and jpg pictures and store them to cdn
 - [ ]  Fix french i18n translations : place, date, end messages, dossiers, typemachine, etc.
@@ -16,10 +16,12 @@ Inspired by the original Carmen Sandiego 1990/1991 MS-DOS Version.  https://www.
 - [ ]  Fix animation display bug on Opera browser
 - [ ]  Improve close button design
 - [ ]  Fix `eval()` on crime options
-- [ ]  Add credit webpage
+- [x]  Add credit webpage
 - [x]  Move EndFail EndSuccess to Config json
+- [ ]  Preload media 
+- [ ]  Move backdrop at top level
 
-## Features 
+## Features, ideas
 Typemachine interactive instructions divided through 20 steps. Main steps are: 
 	* Username input text
 	* New user ? Button yes or no (TO DO store user on remote)
@@ -28,10 +30,9 @@ https://codepen.io/julien180/pen/jRQvrY
 
 Typemachine at the end of the case. Fail or success. 
  
-
 At step 20, the case is starting. 
 
-Clues choose on modal with emojis and vilain animation + club Bubble 
+Clues choosen within modal with emojis and vilain animation + club Bubble 
 
 Destinations choosen on modal with emojis and map animation
 

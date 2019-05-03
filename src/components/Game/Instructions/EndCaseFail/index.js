@@ -7,9 +7,15 @@ class EndCaseFail extends Component {
     const {onChangeStep, step, Cases, userCase, lang, Config, isExpirationTime } = this.props;
     return (
       <div>
-        <Typewriter mb={'mb-4'}  setScroll={this.props.setScroll} mystring={Config[lang].endFail.loser} step={step} changeStep={onChangeStep} > </Typewriter>
+
+        <Typewriter mb={'mb-4'}  setScroll={this.props.setScroll} mystring={Config[lang].endSuccess.wait} step={step} changeStep={onChangeStep} > </Typewriter>
         {
-          step > 21 && isExpirationTime
+          step > 22
+          ?  <Typewriter mb={'mb-4'}  setScroll={this.props.setScroll} mystring={Config[lang].endFail.loser} step={step} changeStep={onChangeStep} > </Typewriter>
+          : ''
+        }
+        {
+          step > 23 && isExpirationTime
           ? <div>
               <Typewriter mb={'mb-4'} setScroll={this.props.setScroll} mystring={Config[lang].endFail.expiration} step={step} changeStep={onChangeStep} > </Typewriter>
               <button onClick={() => this.props.restart()}>{Config[lang].buttons.restart}</button>  
@@ -17,7 +23,7 @@ class EndCaseFail extends Component {
           : ''
         }
         {
-          step > 21 && !isExpirationTime
+          step > 23 && !isExpirationTime
           ? <div>
               <Typewriter mb={'mb-4'} setScroll={this.props.setScroll} mystring={`${Config[lang].endFail.noWarrant} ${Cases[userCase][lang].thief}`} step={step} changeStep={onChangeStep} > </Typewriter>
               <button onClick={() => this.props.restart()}>{Config[lang].buttons.restart}</button>  

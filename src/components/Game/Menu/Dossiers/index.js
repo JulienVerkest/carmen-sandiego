@@ -31,7 +31,7 @@ class ModalDossiers extends Component {
         <div className="cs-modal-dossier-inner">
           <header className="cs-modal-dossier-name">{Dossier[0][lang].name}</header>
           <article>
-            <div className="cs-modal-dossier-picture"><img src={`http://carmen.tulear.fr/assets/dossiers/${Dossier[0][lang].picture}`} alt=""  /></div>
+            <div className="cs-modal-dossier-picture"><img src={`https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/Dossiers/${Dossier[0][lang].picture}`} alt=""  /></div>
             <div className="cs-modal-dossier-infos">
               {display}
             </div>

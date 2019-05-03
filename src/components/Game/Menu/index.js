@@ -2,12 +2,12 @@
 import React, { useState } from 'react';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import ModalDossiers from './Dossiers';
+import ModalCredits from './Credits';
 import './index.css';
-
-
 
 function Menu(props) {
   const [modalDossier, setModalDossier] = useState(true);
+  const [modalCredits, setModalCredits] = useState(true);
   const [saveDone, setSaveDone] = useState(true)
   const [lastOpenDossier, setLastOpenDossier] = useState(null);
   const { lang, user, step, userRank, changeLang, Dossiers, Config, saveStateToLocalStorage, hydratestateFromLocalStorage } = props;
@@ -24,7 +24,7 @@ function Menu(props) {
               <NavDropdown.Item disabled={step < 20 ? true : false}  onClick={() => { setSaveDone(false);setTimeout(() => {saveStateToLocalStorage();setSaveDone(true); }, 2000); }} >{menu.entry1.item3}</NavDropdown.Item>
               <NavDropdown.Item onClick={() => setTimeout(() => hydratestateFromLocalStorage(), 2000)} >{menu.entry1.item4} </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item onClick={() => alert('Julien Verkest 2019 - ReactJS')}>{menu.entry1.item1}</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setModalCredits(false) }>{menu.entry1.item1}</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title={menu.entry2.name} id="basic-nav-dropdown">
               {Dossiers.map(dossier =>
@@ -46,6 +46,11 @@ function Menu(props) {
       {
         !modalDossier 
         ? <ModalDossiers lang={lang} hideModalDossier={setModalDossier} lastOpenDossier={lastOpenDossier}></ModalDossiers>
+        : ''
+      }
+      {
+        !modalCredits
+        ? <ModalCredits lang={lang} hideModalCredits={setModalCredits} ></ModalCredits>
         : ''
       }
       

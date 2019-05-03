@@ -20,21 +20,29 @@ class Vilain extends Component {
 
   componentDidMount() {
     const { userCase, userStep, Cases, lang } = this.props;
+    const vilain1 = "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/vilain-1-compress.mp4";
+    const vilain2 = "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/vilain-2-compress.mp4";
+    const vilain3 = "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/vilain-3-compress.mp4";
+    const hache = "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/hache-compress.mp4";
+    const gun = "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/gun-compress.mp4";
+    let weapon = Math.floor(Math.random() * 2) + 1;
+    weapon = weapon == 1 ? gun : hache; 
     if(userStep > 0 && userStep < Cases[userCase][lang].steps.length - 1) {
       if(userStep % 3 === 0) { 
-        this.setState({vilain: "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/vilain-3-compress.mp4"});
+        this.setState({vilain: vilain3});
       } else if(userStep % 2 === 0) { 
-        this.setState({vilain: "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/vilain-2-compress.mp4"});
+        this.setState({vilain: vilain2});
       }
       else {
-        this.setState({vilain: "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/vilain-1-compress.mp4"});
+        this.setState({vilain: vilain1});
       }
       
     } else if (this.state.display && Cases[userCase][lang].steps.length - 1 === userStep) {
-      this.setState({vilain: "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/hache-compress.mp4"});
+
+      this.setState({vilain: weapon});
     }
     else {
-      this.setState({vilain: "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/vilain-1-compress.mp4"});
+      this.setState({vilain: vilain1});
     }
 
     if(this.myVideo) {
