@@ -113,7 +113,7 @@ const Config = {
     },
     "credits": {
       "name": "Julien Verkest",
-      "infos": "April 2019 all rights reserved"
+      "infos": " 2019 all rights reserved"
     } 
   },
   "fr":{

@@ -1,8 +1,26 @@
 
-#  Carmen Sandiego with react
+#  Carmen Sandiego with React.js
 
 ## The Game 
 Inspired by the original Carmen Sandiego 1990/1991 MS-DOS Version.  https://www.youtube.com/watch?v=bJFLONgDnDE
+
+
+##  Commands
+
+Install with 
+`yarn install` or `npm install`
+
+Run the game in dev mode to [http://localhost:3000](http://localhost:3000) with hot reload
+`yarn start` or `npm start`
+
+
+Builds the app for production to the `build` folder.
+`yarn build` or `npm run build`
+
+Launches the test runner in the interactive watch mode.
+`npm test`
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ##  TO DO
 - [ ]  Save and Restore the state of the game in localStorage with possibily to rename each save
@@ -21,7 +39,7 @@ Inspired by the original Carmen Sandiego 1990/1991 MS-DOS Version.  https://www.
 - [ ]  Preload media 
 - [ ]  Move backdrop at top level
 
-## Features, ideas
+## Features 
 Typemachine interactive instructions divided through 20 steps. Main steps are: 
 	* Username input text
 	* New user ? Button yes or no (TO DO store user on remote)
@@ -47,17 +65,3 @@ i18n English and French
 Data of the case are stored onto a json files `GameData/Data/`
 
 
-
-##  Commands
-
-Run the game in dev mode to [http://localhost:3000](http://localhost:3000) with hot reload
-`yarn start` or `npm start`
-
-
-Builds the app for production to the `build` folder.
-`yarn build` or `npm run build`
-
-Launches the test runner in the interactive watch mode.
-`npm test`
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

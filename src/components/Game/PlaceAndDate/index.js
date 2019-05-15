@@ -4,11 +4,11 @@ import './index.css';
 class PlaceAndDate extends Component {
   render(){
     const { place, mydate } = this.props;
-    let myPlace = (parseInt(mydate.format("H")) > 22 || parseInt(mydate.format("H")) < 8) ? 'sleeping...' : place; 
+    let myPlace = (mydate.getHours() > 22 || mydate.getHours() < 8) ? 'sleeping...' : place; 
     return (
       <div>
         <div className="cs-place" style={{textTransform:'uppercase'}}>{myPlace}</div>
-        <div className="cs-date">{mydate.format("dddd, h a")} </div>
+        <div className="cs-date">{mydate.toLocaleDateString('en-US', { weekday: 'long', hour: 'numeric' })} </div>
       </div>
     );
   }

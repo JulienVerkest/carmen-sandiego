@@ -5,7 +5,7 @@ import Instructions from './Instructions';
 import PlaceAndDate from './PlaceAndDate';
 import Buttons from './Buttons';
 import Debug from '../Debug';
-import moment from 'moment';
+// import moment from 'moment';
 import Cases from '../GameData/Data/Cases';
 import Config from '../GameData/Data/Config';
 import Dossiers from '../GameData/Data/Dossiers';
@@ -16,19 +16,36 @@ import Arrest from './Arrest';
 import soundClock from './PlaceAndDate/clock-2.mp3';
 import './index.css';
 
+/* with moment 
 const startDate = moment('2019-03-25 09');
 const endDate = moment('2019-03-31 17');
+*/
+
+/* without momentJS
+let startDate = new Date('March 25, 2019 09:00:00')
+startDate.setHours(startDate2.getHours() + 2)
+startDate.toLocaleDateString('en-US', { weekday: 'long', hour: 'numeric' });
+
+let endDate = new Date('March 31, 2019 17:00:00')
+
+*/
+
+const startDate = new Date('March 25, 2019 09:00:00');
+const nextDate = new Date('March 25, 2019 09:00:00');
+const endDate = new Date('March 31, 2019 17:00:00');
+
 const initialState = {
-  user: '',
+  user: 'tptp',
   userCase: 0, // First arg is the n° case Cases[0][this.state.lang].steps[0]
   userStep: 0, //  second arg n° step :  Cases[0][this.state.lang].steps[0]
   lang: 'en',
   isUserValid: false,
   isNewUser: true,
   userRank: 'Rookie',
-  step: 1,
+  step: 20,
   place: 'Headquarters',
   mydate: startDate,
+  nextdate: nextDate,
   isViewClue: false,
   isViewCrime: false,
   isViewArrest: false,
@@ -66,7 +83,7 @@ class Interface extends Component {
   }
 
   componentDidMount() {
-    this.onChangeStep(1);
+    this.onChangeStep(20);
   }
 
   /*
@@ -162,18 +179,22 @@ class Interface extends Component {
 
   async changeDate(hours) {
     // Sleeping // Add hours if > 10pm, case go on at 8am
-    const prevMyDate = moment(this.state.mydate);
-    const nextMyDate = moment(this.state.mydate).add(hours, 'hours');
+    // const prevMyDate = moment(this.state.mydate);
+    // const nextMyDate = moment(this.state.mydate).add(hours, 'hours');
+
+    this.state.nextdate.setHours(this.state.mydate.getHours() + hours);
+    this.setState({nextdate: this.state.nextdate})
+
     let speed = 500;
-    if(parseInt(nextMyDate.format('H')) > 22 || (parseInt(nextMyDate.format('H')) < parseInt(prevMyDate.format('H')))) {
-      if(parseInt(nextMyDate.format('H')) === 23) {
+    if(this.state.nextdate.getHours() > 22 || (this.state.nextdate.getHours() < this.state.mydate.getHours())) {
+      if(this.state.nextdate.getHours() === 23) {
         hours = hours + 9;
       }
-      if(parseInt(nextMyDate.format('H')) === 24) {
+      if(this.state.nextdate.getHours() === 24) {
         hours = hours + 8;
       }
-      if(parseInt(nextMyDate.format('H')) < parseInt(prevMyDate.format('H'))) {
-       hours = hours + 8 - parseInt(nextMyDate.format('H'));
+      if(this.state.nextdate.getHours() < this.state.mydate.getHours()) {
+       hours = hours + 8 - this.state.nextdate.getHours();
       }
       speed = 200;
     }
@@ -182,14 +203,15 @@ class Interface extends Component {
     for (let i=1;i<=hours;i++) {
       this.playSoundClock();
       await this.wait(speed);
-      await this.setState({ mydate: moment(this.state.mydate).add(1, 'hours')}); 
+      await this.setState({ mydate: new Date(this.state.mydate.setHours(this.state.mydate.getHours() + 1)) }); 
       this.checkExpirationDate();
       this.pauseSoundClock();
     }
   } 
 
   checkExpirationDate = () => {
-    if(moment(this.state.mydate).isAfter(endDate)) {
+    // if(moment(this.state.mydate).isAfter(endDate)) {
+    if(this.state.mydate.getTime() > endDate.getTime()) {
       this.onChangeStep(21);
       this.setState({ isExpirationTime: true});
     }
@@ -235,7 +257,8 @@ class Interface extends Component {
   hydratestateFromLocalStorage = () => {
     if (localStorage.hasOwnProperty('mysave')) {
       let value = JSON.parse(localStorage.getItem('mysave'));
-      value.mydate = moment(value.mydate)
+      value.mydate = new Date(value.mydate)
+      value.nextdate = new Date(value.nextdate)
       this.setState(value)
     }
   }

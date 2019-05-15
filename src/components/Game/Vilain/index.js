@@ -26,7 +26,7 @@ class Vilain extends Component {
     const hache = "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/hache-compress.mp4";
     const gun = "https://www.julien-verkest.fr/carmen-sandiego-reactjs/assets/vilain/gun-compress.mp4";
     let weapon = Math.floor(Math.random() * 2) + 1;
-    weapon = weapon == 1 ? gun : hache; 
+    weapon = weapon === 1 ? gun : hache; 
     if(userStep > 0 && userStep < Cases[userCase][lang].steps.length - 1) {
       if(userStep % 3 === 0) { 
         this.setState({vilain: vilain3});
